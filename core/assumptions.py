@@ -71,7 +71,7 @@ UI_RANGES = {
     "T_chip_target_C":  ("Chip target temp [°C]", 55.0, 80.0, 1.0),
     "T_chip_trip_C":    ("Chip trip temp [°C]", 80.0, 105.0, 1.0),
     "T_evap_C":         ("Evaporation temp [°C]", 30.0, 70.0, 1.0),
-    "T_cond_C":         ("Condensing temp [°C]", 45.0, 70.0, 1.0),
+    "T_cond_C":         ("Condensing temp [°C]", 45.0, 80.0, 1.0),
     "superheat_K":      ("Superheat [K]", 1.0, 10.0, 0.5),
     "subcool_K":        ("Subcooling [K]", 1.0, 8.0, 0.5),
     "Tw_in_free_C":     ("Water supply (free cooling) [°C]", 18.0, 38.0, 1.0),

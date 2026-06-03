@@ -43,7 +43,7 @@ cooling_app/
 2. **ADAMS Live** — real-time dashboard for the ADAMS architecture on
    R1336mzz(Z). Sliders for V1 valve, chip load and ambient drive an HPZ
    pressure gauge, junction-temperature bars (yellow >85 °C, red >95 °C),
-   loop temperatures, and a colour-coded mode indicator. Dark theme.
+   loop temperatures, and a colour-coded mode indicator.
 3. **Steady State** — power breakdown, partial vs full-facility PUE, mode
    comparison, condenser sensitivity.
 4. **Cold Plate** — interactive geometry; chip temp, vapor quality, ΔP, CHF
@@ -81,3 +81,34 @@ Early-screening model. Cold-plate HTC/CHF, condenser UA, lumped masses, the
 R1336mzz(Z) non-saturation properties, and all cost/climate figures are
 clearly-labelled, editable assumptions — not vendor/measured data. Replace them
 before detailed design or investment decisions.
+
+## Visual redesign update
+
+This package includes a redesigned Streamlit shell focused on a single light engineering-dashboard design language.
+
+Key UI changes:
+
+- Global light CSS theme and Plotly template applied across the full app.
+- Consistent semantic colors: green = safe, amber = warning, red = danger.
+- Journey-based navigation: Command Center, Design a System, Stress-test It, Justify It, Compare Scenarios, Report Mode, and Reference.
+- Product-style KPI cards with line icons, monospaced numbers, muted units, and larger spacing.
+- Scenario-comparison board for saving up to three configurations and comparing KPIs side by side.
+- Guided report mode that generates a printable one-page HTML design brief from the current inputs.
+
+
+
+## Latest UI/configuration update
+
+- Switched the app away from the dark theme to a polished light engineering-dashboard theme.
+- Increased the evaporation temperature slider upper limit to 70 °C.
+- Increased the condensing temperature slider upper limit to 80 °C.
+
+## Current UI/report update
+
+- ADAMS Live is now shown directly on the Command Center page, with no expander required.
+- Section subtitles were removed from the journey pages to keep the screen compact.
+- Main tabs and horizontal sub-tabs/radio selectors use larger, high-contrast pill styling.
+- ADAMS Live ambient temperature now affects the heat-sink limit and can raise HPZ pressure when the condenser/ambient constraint is controlling.
+- Stress-test now includes PLC/control architecture and PLC state-machine visualizations above the dynamic simulator.
+- Report Mode now supports a printable HTML brief, a PDF brief, report visuals, and optional uploaded supporting images.
+- PDF export requires `reportlab` and image embedding uses `pillow`; both are listed in `requirements.txt`.
